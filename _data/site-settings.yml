@@ -1,0 +1,26 @@
+seo: 
+  site_name: Women Do Crypto Events
+  title: Join us for our upcoming Women Do Crypto events in Dubai! 
+  description: Discover our upcoming blockchain and cryptocurrency events in Dubai. We host educational workshops that we're confident you'll love!
+  keywords: blockchain and cryptocurrency, women empowerment, women blockchain education
+  social_image: /images/logo.webp
+  author: Women Do Crypto
+  favicon_image: /favicon.ico
+social: 
+  instagram: https://www.instagram.com/womendocrypto/
+  facebook: https://www.facebook.com/womendocryptouae/
+  linkedin: https://www.linkedin.com/company/women-do-crypto/
+design: 
+  dark-text_color: '#262222'
+  light-text_color: '#F0F0F0'
+  accent-text_color: '#4f384d'
+  featured-text_color: '#c5adc3'
+  hover-link_color: '#D6C5D5'
+  hover-button_color: '#B08BAB'
+  dark_color: '#262222'
+  dark-footer_color: '#262222'
+  accent_color: '#B08BAB'
+  light_color: '#d0dae4'
+  featured_color: '#51424f'
+
+ 

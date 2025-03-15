@@ -1,0 +1,248 @@
+---
+layout: default
+items:
+   -
+      showMenuButton: true
+      showEventDetails: true
+      image: /images/wdc1.webp
+      alt: women crypto workshop
+      title: Crypto Coffee Morning
+      topic: The Secret Behind Creating Your Own Cryptocurrency
+      month: January,
+      day: exact date to be announced shortly
+      location: Cheeky Camel, Voco Bonnington Hotel, Jumeirah Lake Towers, Dubai
+      time: 9.00 - 12.00
+      cost: AED 80
+      id: myModal1
+      event_id: host-event-1
+      email_id: email-event-1
+      name_id: participant-1
+      phone_id: phone-1
+      description: Interested in exploring specific topics related to blockchain and cryptocurrencies? 
+      eventDetails: >-
+         Women Do Crypto is excited to invite you for a coffee morning to
+         explore the world of cryptocurrencies and discover how digital assets
+         are created.
+
+
+         We will dive into the key steps, technical skills, and resources necessary for creating digital assets. 
+         Additionally, you will uncover the essential measures required to ensure the success and longevity of your crypto project.
+
+
+         Don't miss out on this amazing opportunity to expand your knowledge, make connections, and enjoy a wonderful morning. 
+         Save your spot now and be a part of this unique event!
+   -
+      showMenuButton: false
+      showEventDetails: true
+      image: /images/wdc2.webp
+      alt: women crypto workshop
+      title: Crypto Masterclass
+      topic: Crypto Fundamentals
+      month: January,
+      day: exact date to be announced shortly
+      location: Meeting Room Chelsea, Voco Bonnington Hotel, JLT, Dubai
+      time: 9.00 - 12.00
+      cost: AED 150
+      id: myModal2
+      event_id: host-event-2
+      email_id: email-event-2
+      name_id: participant-2
+      phone_id: phone-2
+      description: New to cryptocurrency and blockchain technology?
+      eventDetails: >-
+         Our comprehensive Crypto Fundamentals Masterclass is perfect for beginners. In just a 3-hour session, you'll gain essential knowledge about cryptocurrency and blockchain technology. 
+
+
+         You will walk away with:
+           - Essential understanding of blockchain
+           - Comprehension of blockchain value drivers
+           - Risks and opportunities of the crypto market
+           - Ways to make money with cryptocurrency
+           - Factors to consider when evaluating crypto projects
+   -
+      showMenuButton: false
+      showEventDetails: true
+      image: /images/wdc3.webp
+      alt: women crypto workshop
+      title: Crypto Workshop
+      topic: Crypto Trading Starter
+      month: January,
+      day: exact date to be announced shortly
+      location: Meeting Room Chelsea,  Voco Bonnington Hotel, JLT, Dubai
+      time: 9.00 - 12.00
+      cost: AED 600
+      id: myModal3
+      event_id: host-event-3
+      email_id: email-event-3
+      name_id: participant-3
+      phone_id: phone-3
+      description: Already possess knowledge of cryptocurrency and blockchain but seeking guidance on practical application?
+      eventDetails: >-
+         Join us for a transformative 3-hour session where you'll explore cryptocurrency websites and exchanges, gaining the essential know-how to read the market and analyze crypto projects. 
+
+
+         You will walk away with:
+          - Reading market trends
+          - Factors to consider when evaluating cryptocurrency projects
+          - Investing vs trading cryptocurrencies
+          - Factors to consider when choosing a cryptocurrency exchange
+          - Detecting red flags and identifying promising signals
+events:
+   -
+      image: /images/wdc4.webp
+      alt: crypto women event
+      aspect-ratio: landscape
+      name: >-
+         Revolutionizing the Crypto Landscape. Driving Innovation and
+         Advancement
+      month: October
+      day: 7
+      location: Dubai World Trade Center
+      description: >-
+         Women Do Crypto has been invited to speak at ABC Conclave in what
+         promisses to be a highly insightful panel discussion alongside industry
+         experts.
+
+
+         Join us to for an engaging conversation on how the crypto landscape is
+         driving innovation and what impact is having on the global economy.
+   -
+      image: /images/wdc5.webp
+      alt: crypto women event
+      aspect-ratio: landscape
+      name: Expand North Star Expo
+      month: October
+      day: 15 - 18
+      location: Dubai Harbour, hall 6, stand D20
+      description: >-
+         Women Do Crypto has been selected by Sharjah Business Women Council to
+         showcase at this prestigious event for startups and investors. 
+
+
+         Come visit us to explore the latest technological advances driving
+         digital transformation across various industries, connect with
+         inspiring entrepreneus, and empower women in the tech industry.  
+---
+<!-- Banner --> 
+<section class="grid-center banner tall-60 bg-overlay">
+    <div class="col-9_xs-12-middle center padded-b flex grid">
+       <div class="col-12 grid padded-t">
+        <h2 class="col-12 editable uppercase intro" data-aos="fade-up">Upcoming Events</h2>
+        <h1 class="col-12 editable" data-aos="fade-up">
+           by Women Do Crypto 
+        </h1>
+      </div>  
+    </div> 
+</section>     
+
+<!-- Upcoming host event -->
+<section class="padded-t padded-b">
+  <h2 class="margin-b-1 editable padded-t-lg-xs center" data-aos="fade-up"> Events we host </h2>
+  {% for item in page.items %}
+  <div class="padded grid-spaceBetween padded-xs">
+      <div class="col-12 grid-spaceBetween {% cycle '', 'flex-reverse' %}">
+          <div class="col-6_md-12 responsive-margin-b">
+            <h3 class="margin-b-1 editable padded-t-lg-xs padded-b" data-aos="fade-up">{{item.title}} </h3>
+            <h4 class="margin-b-1 editable"> {{item.description}} </h4>
+            <p class="editable"> <strong> Topic: </strong> {{item.topic}} </p>
+            <p class="editable"> <strong> Date: </strong> {{item.month}} {{item.day}}</p>
+            <p class="editable"><strong> Time: </strong> {{item.time}}</p>
+            <p class="editable"><strong> Location: </strong> {{item.location}} </p>
+            <p class="editable"><strong> Cost: </strong> {{item.cost}}</p>
+            <p class="editable"> <em>Valet parking available </em> </p>
+            {% if item.showMenuButton == true %}
+            <div class="grid">
+              <a class="button btn btn-menu flex uppercase editable" href="/uploads/coffee-morning-menu.pdf" arget="_blank" rel="noopener"> View menu </a>
+            </div>
+            {% endif %}
+          </div>
+          <div class="col-5_md-12-middle flex">
+            <img 
+            src="{{item.image}}"
+            alt="{{item.alt}}"
+            loading="lazy"
+            width="517" height="325"
+            class="editable"
+             />
+          </div>
+        </div>
+        {% if item.showEventDetails  == true %}
+        <div class="col-12 padded-t padded-l-2">
+          <h4 class="editable">Event details</h4>
+          <p class="editable"> {{item.eventDetails | markdownify}} </p>
+        </div>
+        {% endif %}
+        <div class="col-12 grid-center">
+          <button class="button btn btn-register flex uppercase editable modal-trigger" data-modal-id="{{item.id}}"> Register </button>
+        </div>
+        <div id="{{item.id}}" class="modal">
+          <div class="modal-content padded-1 padded-xs-0">
+            <span class="close">&times;</span>
+            <h2 class="center padded-b padded-t margin-y-mob">Register for this event</h2>
+            <form id="registration-form" method="POST" action="/success" data-netlify="true" class="grid-spaceAround">
+              <input type="hidden" name="registration" value="registration-form" />
+              <div class="col-12 hidden">
+                <input type="text" placeholder="Don't fill this out if you're human:" name="bot-field" />
+              </div>
+              <div class="sm col-10">
+                <label for="{{item.event_id}}">event:</label>
+                <input type="text" id="{{item.event_id}}" name="name" value="{{item.title}}" required />
+              </div>
+              <div class="sm col-10">
+                <label for="{{item.name_id}}">full name:</label>
+                <input type="text" id="{{item.name_id}}" name="name" class="padded-1" placeholder="Miriam Awad" required />
+              </div>
+              <div class="sm col-10">
+                <label for="{{item.email_id}}">your email:</label>
+                <input type="email" id="{{item.email_id}}" name="email" class="padded-1" placeholder="mawad@emailprovider.com" required />
+              </div>
+              <div class="sm col-10">
+                <label for="{{item.phone_id}}">your number:</label>
+                <input type="tel" id="{{item.phone_id}}" name="phone" class="padded-1" placeholder="+971 xx xxx xxxx" required />
+              </div>
+              <button type="submit" class="btn btn-register flex uppercase">Submit</button>
+            </form>
+          </div>
+        </div> 
+        <hr />     
+  </div>
+  {% endfor %}
+</section>
+ 
+<!-- Upcoming guest event -->
+<section class="padded-b">
+  <h2 class="margin-b-1 editable padded-y-xs center" data-aos="fade-up"> Our engagements in industry events</h2>
+  {% for event in page.events %}
+  <div class="grid-spaceAround padded padded-y-xs {% cycle '', 'flex-reverse' %}">
+    <div class="col-6_md-12-middle flex">
+      <img 
+      src="{{event.image}}"
+      alt="{{event.alt}}"
+      loading="lazy"
+      width="517" height="325"
+      class="editable"
+       />
+    </div>
+    <div class="col-6_md-12-middle padded">
+      <h3 class="margin-b-1 editable padded-t-lg-xs padded-b" data-aos="fade-up"> {{event.name}} </h3>
+      <p class="editable"> {{event.description | markdownify }} </p>
+      <p class="editable"><strong> Location: </strong> {{event.location}} </p>
+      <p class="editable"> <strong> Date: </strong> {{event.month}} {{event.day}}</p>
+    </div>
+    <hr class="event-line"/>
+    {% if forloop.last %}
+    <style>
+      div:last-child hr.event-line {
+        display: none;
+      }
+    </style>
+  {% endif %}
+  </div>
+  {% endfor %}
+</section>
+
+
+    
+
+              
+

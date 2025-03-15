@@ -1,0 +1,618 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+  }
+  
+  [class*=grid] {
+      margin:0;
+  }
+  
+  [class*="grid-"][class*="col-"], [class*="grid-"][class*="col_"], [class*="grid-"][class~="col"], [class*="grid_"][class*="col-"], [class*="grid_"][class*="col_"], [class*="grid_"][class~="col"], [class~="grid"][class*="col-"], [class~="grid"][class*="col_"], [class~="grid"][class~="col"]{
+    padding: 1rem;
+    padding-top: 1.7rem;
+  }
+  
+  html {
+      scroll-behavior: smooth;
+  } 
+  
+  ::selection{
+    background: #c5adc3;
+  }
+  
+  @font-face{
+    font-family: 'Helvetica', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  body {
+    font-family: 'zen-kurenaido', arial, sans-serif;
+    color: var(--dark-text);
+    background-color: var(--light-text);
+  } 
+  
+  h1, h2, h3, h4, h5  {
+    font-family: 'noto-sans-pahawh-hmong', arial, sans-serif;
+    font-weight: 500;
+    color: var(--accent-text);
+    line-height: 1;
+    margin-bottom: 0.8rem;
+  }
+  
+  
+  h1  { 
+    font-size: 1.6rem; 
+    margin-bottom: 0;
+    color: var(--light-text);
+  } 
+
+  h2  { 
+    font-size: clamp(1.4rem, 10vw, 3rem);  
+  }
+  
+  h2.intro {
+    font-size: clamp(3.2rem, 10vw, 4rem);
+    color: var(--light-text);
+  }
+  
+  h3  { font-size: 2.4rem;}
+  h4  { font-size: clamp(1.2rem, 10vw, 1.5rem);  }
+  h5  { font-size: 1.3rem;  }
+  p, ul, ol, a { font-size: 1.1rem;  }
+  li { 
+    margin-left: 2rem; 
+    margin-bottom: 0.5rem;
+  }
+  
+  .logo {
+    color: var(--dark-text); 
+    margin-left: -1rem;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex-row{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-row-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .month {
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  
+  .day {
+    font-size: 3rem;
+  }
+  
+  .light-text      { color: var(--light-text); } 
+  .accent-text     { color: var(--accent-text); } 
+  .featured-text   { color: var(--featured-text); } 
+  .dark-text       { color: var(--dark-text); } 
+  
+  .bold {
+    font-weight: 600;
+  }
+  
+  .light {
+    font-weight: 300;
+  }
+  
+  .lg-text {
+    font-size: 1.2rem;
+  }
+  .uppercase {
+      text-transform: uppercase;
+  }
+  
+  img {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: var(--accent);
+    vertical-align: middle;
+    aspect-ratio: 16/9 auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+  }
+  
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .privacy {
+    border-bottom: 1.5px solid;
+  }
+  
+  a:hover,
+  a:focus,
+  a > h2:hover,
+  a > h2:focus {
+    color: var(--hover-link);
+    opacity: 0.9;
+  }
+  
+  nav > a { 
+      text-decoration: none;
+      border: none;
+      padding: 0.8rem;
+      font-size: clamp(0.8rem, 10vw, 1.1rem);
+  }
+  
+  .flex {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    justify-items: end;
+  } 
+  
+  p {
+      margin-bottom: 0.8rem;
+     }
+  
+  h2:last-child,
+  h3:last-child,
+  h4:last-child,
+  h5:last-child,
+  h6:last-child,
+  p:last-child {
+    margin-bottom:0;
+  }
+  
+  /* Universal Classes */
+  .tall-40 { min-height: 40vh; }
+  .tall-50 { min-height: 50vh; }
+  .tall-60 { min-height: 60vh; }
+  .tall-70 { min-height: 70vh; }
+  .tall-80 { min-height: 80vh; }
+  .tall-90 { min-height: 90vh; }
+  
+  
+  .padded    { padding: 5%;    }
+  .padded-lg { padding: 10%;   }
+  
+  .padded-1  { padding: 1rem;  }
+  .padded-2  { padding: 2rem;  }
+  
+  
+  .padded-t  { padding-top: 5%;     }
+  .padded-b  { padding-bottom: 5%;  }
+  .padded-l  { padding-left: 5%;    }
+  .padded-r  { padding-right: 5%;   }
+  
+  .padded-b-lg { padding-bottom: 10%; }
+  .padded-t-lg { padding-top: 10%; }
+  
+  .padded-0      { padding: 0; }
+  .padded-b-0    { padding-bottom: 0; }
+  .padded-t-0    { padding-top: 0; }
+  .padded-r-0    { padding-right: 0; }
+  .padded-l-0    { padding-left: 0; }
+
+  .padded-0.5  { 
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .padded-t-1 {
+    padding-top: 1rem;
+  }
+  .padded-x {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .margin-1      { margin: 1rem;}
+  .margin-b-0    { margin-bottom: 0; }
+  .margin-l-0    { margin-left: 0; }
+  
+  .padded-l-2   { padding-left: 1.5rem; }
+  
+  .margin-b-1    { margin-bottom: 1rem; }
+  .margin-b-2    { margin-bottom: 2rem; }
+  .margin-b-3    { margin-bottom: 3rem; }
+  
+  .margin-t-0    { margin-top: 0; }
+  .margin-t-1    { margin-top: 1rem; }
+  .margin-t-2    { margin-top: 2rem; }
+  .margin-t-3    { margin-top: 3rem; }
+  
+  .margin-t-lg { margin-top: 5%;}
+  
+  .capped-height { min-height: 230px;  }
+  
+  .left     {  text-align: left;     }
+  .right    {  text-align: right;    }
+  .center   {  text-align: center;   }
+  
+  .flex-flip:nth-child(2n){  flex-direction: row-reverse; }
+  
+  /* Background colors */
+  
+  .bg-dark-footer     { background-color: var(--dark-footer);  }
+  
+      
+  /* Image Styles */
+  
+  .bg-image {
+      background-color: var(--accent);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url('/images/dish1.webp');
+  }
+  
+  .banner {
+      background-image: url('/images/banner.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  
+  .icons {
+    display: inline-block;
+    z-index: 100;
+  }
+  
+  /* Coming soon */ 
+  
+  hr {
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--featured-text);
+    border: 0 none;
+    margin-top: 2rem;
+  }
+  
+  hr.w-50 {
+    width: 50%;
+  }
+  
+  /* Meny images aspect ratio  */
+  .portrait-tall { padding-bottom: 125%; }
+  .portrait { padding-bottom: 75%; }
+  .square { padding-bottom: 80%; }
+  .landscape { padding-bottom: 45%; }
+  .landscape-wide { padding-bottom: 56%; }
+  
+  
+  .nav-link {
+      font-size: 1.3rem;
+      display: block;
+      color: var(--light);
+      font-weight: normal; 
+  }
+  
+  /* Button Styles */
+  .button,
+  .button-solid{
+    text-decoration: none;
+    border: 2px solid;
+    padding: 0.6rem 2rem;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+   
+  
+  button:hover,
+  a.btn:hover{
+    background: inherit;
+  }
+  
+  a.btn:focus {
+    color: inherit;
+  }
+  
+  .btn {
+      width: 200px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 16px;
+      transition: all .4s ease-in-out;
+      background-color: inherit;
+  }
+  
+  .btn-menu {
+    color: var(--dark-text);
+      background-image: linear-gradient(to right, #B08BAB, #c5adc3, #B08BAB, #c5adc3); box-shadow: 0 8px 16px 0 rgba(176, 139, 171, 0.57);
+  }
+  
+  .btn-register {
+      color: var(--dark-text);
+      border: 1px solid var(--accent);
+      box-shadow: 0 8px 16px 0 rgba(176, 139, 171, 0.57) ;
+      background-color: inherit;
+  }
+  
+  .btn-register:hover,
+  .btn-menu:hover {
+      background-position: 100% 0;
+      transition: all .4s ease-in-out;
+      color: var(--accent);
+      transform: scale(1.05);
+  }
+  
+  .btn-register:hover,
+  .btn-menu:focus {
+      outline: none;
+  }
+  
+  .bg-overlay {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .bg-overlay::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(105, 97, 96, 0.6);
+    }
+    
+  .bg-overlay > * {
+      position: relative;
+  }
+    
+  //form modal
+  /* Add this code to your CSS file */
+  .sm {
+    width: 550px;
+  }
+  
+  input, textarea{
+    border-style: solid;
+    border: none;
+    padding: 0.8em;
+    display: block;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  
+  label, input {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1rem;
+  }
+  
+  input, textarea {
+    border-bottom: 2px solid var(--accent);
+    resize: none;
+    background: inherit;
+  }
+  form > button {
+    background-color: #fefefe;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 0.2;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    underline: 2px solid var(--accent);
+    background: inherit;
+  }
+  
+  textarea {
+    min-height: 5em;
+    font-family: inherit;
+  }
+  
+  input[type="submit"] {
+    display: block;
+  }
+  
+  form [class*=col-] {
+    padding: 6px;
+  }
+  
+  .event-section{
+    position: relative;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fefefe;
+    background-color: #00000066;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 2.2rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-open {
+    overflow-y: hidden; /* disables vertical scrolling of website when modal is open */
+  }
+  
+  .show {
+    overflow-y: auto; /* keeps vertical scrolling of modal when it's open */
+  }  
+  
+  .hidden{
+    display: none;
+  }
+  
+  /* Footer */
+            
+  footer > div > h3 {
+    font-size: 1.9rem;
+    font-weight: normal;
+  }
+
+  .icons > a {
+   padding-right: 1rem;
+  }
+
+  .icons > a:hover {
+    opacity: 0.8;
+  }
+  .inline a {
+      display: inline;
+      padding: 0.5rem;
+    }
+  
+  .las,
+  .lab {
+    font-size: 1.9rem;
+    opacity: 0.8;
+  }
+  
+  .opacity-8 {
+    opacity: 0.8;
+  }
+  /*  General Responsive Styles */
+  
+  .mob-show, 
+  .show-xs,
+  .show-sm,
+  .show-md {
+      display: none;
+  }
+  
+  @media(max-width: 64em){
+    .responsive-margin-b{
+      margin-bottom: 2rem;
+    }
+    .landscape { padding-bottom: 50%; }
+  }
+  
+  @media(max-width: 48em) {
+  
+      .mob-show       { display: block; } 
+      .mob-hide       { display: none; } 
+      .hide-sm        { display: none; } 
+      .center-sm      { text-align: center;}
+      .margin-y-mob {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      .responsive-margin-b-big {
+        margin-bottom: 4rem;
+      }
+  
+      .sm {
+        width: 100%;
+      }
+      .day, 
+      .month{
+        font-size: 1.8rem;
+      }
+      .padded{
+        padding: 2%;
+      }
+      .padded-x {
+        padding-left: 2%;
+        padding-rght: 2%;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+      }
+      h2.intro {
+        margin-top: 2rem;
+      }
+      .banner{
+        background-position: right;
+      }
+      .padded-t {
+        padding-top: 10%;
+      }
+      .padded-b {
+        padding-bottom: 10%;
+      }
+      .tall-60{
+        min-height: 90vh;
+      }
+      .padded-y-xs {
+        padding-top: 10%;
+        padding-bottom: 10%;
+      }
+  }
+  
+  @media(max-width: 36em) {
+     [class*="grid-"][class*="col-"], [class*="grid-"][class*="col_"], [class*="grid-"][class~="col"], [class*="grid_"][class*="col-"], [class*="grid_"][class*="col_"], [class*="grid_"][class~="col"], [class~="grid"][class*="col-"], [class~="grid"][class*="col_"], [class~="grid"][class~="col"]{
+      padding: 0.5rem;
+      padding-bottom: 1.5rem;
+    }
+  
+    h3 {
+      font-size: 1.9rem;
+    }
+    .text-sm {
+      font-size: 0.9rem;
+    }
+    .padded-l-2  {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .padded-t-lg-xs {
+      padding-top: 10%; 
+    }
+    .padded-xs {
+      padding-top: 5%; 
+      padding-bottom: 5%; 
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .padded-xs-0 {
+      padding: 0;
+    }
+    
+    .tall-60-m {
+      min-height: 80vh;
+    }
+  
+    .padded-l-6 { 
+      padding-left: 0; 
+    }
+  }

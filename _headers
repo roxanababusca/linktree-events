@@ -1,0 +1,22 @@
+# Set CSP
+/*
+  Content-Security-Policy: script-src https://womendocryptoevents.netlify.app/ 'sha512-mcltC6QZExHxnvuAZy/ESE5S7OCdAx8lkkBBGjUKDqdtCLraHJqMuTGl11tffoyInmG92Fhn+MJvEKavBVZ6eQ==' 'sha512-k5GRrTGvdMztwFvatnpkLQl0hcqNAsz/xtSqyk3yV0FDjNy/J/IzrKLPpal6zdJzeY0szfpTThvtbfuHJZ4msA==' 'sha512-6lf5izkca9iUNrAfzyrCYgekjQ7zNilc0HONPOnuCN27bBZeh8+EHALIgOjq/NC+EAsd3XzHRQOxm6zFxjJ33w==' 'sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==' 'sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==' 'unsafe-inline'; object-src 'none'; base-uri 'none'; img-src 'self' https://res.cloudinary.com; require-trusted-types-for 'script'
+
+# Set X-Frame-Options header
+/*
+  X-Frame-Options: DENY
+  
+# Set X-Content-Type-Options header
+/*
+  X-Content-Type-Options: nosniff
+
+# Set Referrer-Policy header
+/* 
+Referrer-Policy: strict-origin
+
+# Set HSTS header 
+Strict-Transport-Security: max-age=31536000
+
+# Set Permissions Policy
+/* 
+Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()

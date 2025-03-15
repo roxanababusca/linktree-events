@@ -1,0 +1,28 @@
+collections:
+  projects: 
+    output: true
+    
+_select_data:
+  aspect-ratios:
+    - square
+    - portrait
+    - portrait-tall
+    - landscape
+    - landscape-wide
+
+  column-sizes:
+    col-6: One Half
+    col-12: Full Width
+    col-4: One Third
+    col-3: One Quarter
+    col-6_sm-12: One Half (Stacked on Mobile)
+    col-4_md-6_sm-12: One Third (Stacked on Mobile)
+    col-3_lg-4_md-6_sm-12: One Quarter on XL, One Third on LG, One Half on MD, Stacked on Mobile
+    col-3_md-6_sm-12: One Quarter (Stacked on Mobile)
+
+url: "https://womendocryptoevents.netlify.app/"
+
+include: ["_headers"]
+
+permalink: /404.html
+
